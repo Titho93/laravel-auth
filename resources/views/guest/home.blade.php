@@ -1,5 +1,5 @@
 @extends('layouts.guest')
 
 @section('content')
-    <h1>home</h1>
+    <h1>HOME</h1>
 @endsection

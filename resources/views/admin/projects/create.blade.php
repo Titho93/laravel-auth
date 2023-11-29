@@ -2,8 +2,9 @@
 
 @section('content')
     <div class="container p-4">
-        <h1 class="d-inline-block p-4">Insert New Projects</h1>
-        <button class="btn btn-danger"><a class="nav-link" href="{{ route('admin.projects.index') }}">Return</a></button>
+        <button class="btn btn-dark"><a class="nav-link" href="{{ route('admin.projects.index') }}"><i
+                    class="fa-solid fa-rotate-left"></i></a></button>
+        <h1 class="d-inline-block p-4"><i class="fa-solid fa-file-import"></i> Insert New Projects</h1>
 
         <div class="row">
             <div class="col-8">
@@ -22,8 +23,8 @@
                         <label for="floatingTextarea2">Description</label>
                     </div>
 
-                    <button type="submit" class="btn btn-success">Send</button>
-                    <button type="reset" class="btn btn-secondary">Retry</button>
+                    <button type="submit" class="btn btn-dark">Send</button>
+                    <button type="reset" class="btn btn-dark">Retry</button>
 
                 </form>
             </div>
