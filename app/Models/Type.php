@@ -9,4 +9,8 @@ use Illuminate\Support\Str;
 class Type extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name'
+    ];
 }

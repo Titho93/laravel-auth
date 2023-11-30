@@ -75,9 +75,13 @@ class TypeController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Type $type)
     {
-        //
+        $val_data = $request->validate([
+            'name' => 'required|min:2|max:20'
+        ]);
+        $type->update($val_data);
+        return redirect()->route('admin.types.index');
     }
 
     /**

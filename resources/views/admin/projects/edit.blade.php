@@ -27,7 +27,6 @@
                     </div>
 
                     <button type="submit" class="btn btn-dark">Send</button>
-                    <button type="reset" class="btn btn-dark">Retry</button>
 
                 </form>
             </div>

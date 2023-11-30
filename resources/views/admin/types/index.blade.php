@@ -23,7 +23,14 @@
                     <tbody>
                         @foreach ($types as $type)
                             <tr>
-                                <td>{{ $type->name }}</td>
+                                <td>
+                                    <form action="{{ route('admin.types.update', $type) }}" method="POST" id="form-edit">
+                                        @csrf
+                                        @method('PUT')
+                                        <input type="text" class="form-hidden" value="{{ $type->name }}"
+                                            name="name" />
+                                    </form>
+                                </td>
                                 <td>
                                     <a class="btn btn-dark" href="{{ route('admin.types.show', $type) }}"><i
                                             class="fa-solid fa-circle-info" style="color: #ffffff;"></i></a>
