@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="index w-100 p-3">
-        <h1>Tecnologies List</h1>
+        <h1><i class="fa-solid fa-microchip"></i> Tecnologies List</h1>
         <div class="row">
             <div class="col-6 offset-3">
                 <form action="{{ route('admin.tecnologies.store') }}" method="POST">

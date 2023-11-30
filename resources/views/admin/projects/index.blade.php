@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="index w-100 p-5">
-        <h1>Projects List</h1>
+        <h1><i class="fa-solid fa-diagram-project"></i> Projects List</h1>
         <table class="table w-100">
             <thead>
                 <tr>
@@ -23,6 +23,8 @@
                                     class="fa-solid fa-circle-info" style="color: #ffffff;"></i></a>
                             <a class="btn btn-dark" href="{{ route('admin.projects.create', $project) }}"><i
                                     class="fa-solid fa-plus"></i></a>
+                            <a class="btn btn-dark" href="{{ route('admin.projects.edit', $project) }}"><i
+                                    class="fa-solid fa-pen-to-square"></i></a>
                             <form class="d-inline-block" action="{{ route('admin.projects.destroy', $project->id) }}"
                                 method="POST" onsubmit="return confirm ('Are you sure DELETE this Project?')">
                                 @csrf

@@ -3,7 +3,7 @@
 @section('content')
     <div class="index w-100 p-3">
 
-        <h1>Types List</h1>
+        <h1><i class="fa-solid fa-layer-group"></i> Types List</h1>
         <div class="row">
             <div class="col-6 offset-3">
                 <form action="{{ route('admin.types.store') }}" method="POST">
