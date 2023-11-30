@@ -4,6 +4,9 @@
     <div class="show w-100 p-3">
         <button class="btn btn-dark"><a class="nav-link" href="{{ route('admin.projects.index') }}"><i
                     class="fa-solid fa-rotate-left"></i></a></button>
+        <div class="image">
+            <img src="{{ asset('storage/' . $project->image) }}" alt="{{ $project->name }}">
+        </div>
         <h1>{{ $project->name }}</h1>
         @php
             $date = date_create($project->date);

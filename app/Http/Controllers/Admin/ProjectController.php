@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Project;
 use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class ProjectController extends Controller
 {
@@ -43,9 +44,12 @@ class ProjectController extends Controller
         $new_project = new Project();
         $new_project->fill($form_data);
         $new_project->slug = Str::slug($request->name, "-");
+        $new_project->image = Storage::put('uploads', $form_data['image']);
         $new_project->save();
 
-        return redirect()->route('admin.projects.show', $new_project->id);
+
+
+        return redirect()->route('admin.projects.show', $new_project);
     }
 
     /**
