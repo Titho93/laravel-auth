@@ -75,9 +75,13 @@ class TecnologyController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Tecnology $tecnology)
     {
-        //
+        $val_data = $request->validate([
+            'name' => 'required|min:2|max:15'
+        ]);
+        $tecnology->update($val_data);
+        return redirect()->route('admin.tecnologies.index');
     }
 
     /**

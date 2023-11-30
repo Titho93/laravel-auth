@@ -22,7 +22,15 @@
                     <tbody>
                         @foreach ($tecnologies as $tecnology)
                             <tr>
-                                <td>{{ $tecnology->name }}</td>
+                                <td>
+                                    <form action="{{ route('admin.tecnologies.update', $tecnology) }}" method="POST"
+                                        id="form-edit">
+                                        @csrf
+                                        @method('PUT')
+                                        <input type="text" class="form-hidden" value="{{ $tecnology->name }}"
+                                            name="name" />
+                                    </form>
+                                </td>
                                 <td>
                                     <a class="btn btn-dark" href="{{ route('admin.tecnologies.show', $tecnology) }}"><i
                                             class="fa-solid fa-circle-info" style="color: #ffffff;"></i></a>

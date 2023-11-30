@@ -7,6 +7,12 @@ header{
 
 .main-wrapper{
     height: calc(100vh - 60px);
+    .form-hidden {
+        border: none;
+        &:focus {
+            outline: none;
+        }
+    }
 }
 
 aside{

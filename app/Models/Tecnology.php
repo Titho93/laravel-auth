@@ -10,4 +10,8 @@ use Illuminate\Support\Str;
 class Tecnology extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name'
+    ];
 }
